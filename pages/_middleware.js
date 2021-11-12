@@ -8,7 +8,8 @@ async function redirects(req) {
       //   headers: { Authorization: `Bearer ${process.env.REVUE_API}` },
     });
     console.log(res);
-    // const data = await res.json();
+    const data = await res.json();
+    console.log(data);
     return NextResponse.redirect("/");
   }
 }
