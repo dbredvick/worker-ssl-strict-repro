@@ -7,6 +7,7 @@ async function redirects(req) {
       method: "GET",
       headers: { Authorization: `Bearer ${process.env.REVUE_API}` },
     });
+    console.log(res);
     const data = await res.json();
     return NextResponse.redirect(data.issue[0].url);
   }
